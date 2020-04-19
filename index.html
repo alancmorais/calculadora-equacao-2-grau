@@ -4,7 +4,9 @@
     <title>Calculadora de Função de Segundo Grau</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         type='text/css'>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
@@ -64,9 +66,9 @@
 
             var delta = Math.pow(valorB, 2) - (4 * valorA * valorC);
 
-            var valorX1 =  (-valorB + Math.sqrt(delta)) / 2 * valorA;
+            var valorX1 = (-valorB + Math.sqrt(delta)) / 2 * valorA;
 
-            var valorX2 =  (-valorB - Math.sqrt(delta)) / 2 * valorA;
+            var valorX2 = (-valorB - Math.sqrt(delta)) / 2 * valorA;
 
             var inputValorX1 = document.getElementById("valorX1");
             inputValorX1.value = valorX1;
@@ -76,4 +78,5 @@
         }
     </script>
 </body>
+
 </html>
