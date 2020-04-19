@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <title>Calculadora de Função de Segundo Grau</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        type='text/css'>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <img src="https://www.colegiopectrus.com.br/images/logo.png" width="200">
+        <span class="navbar-brand mb-0 h1">Calculadora de Função de Segundo Grau</span>
+    </nav>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-12">
+                <p>Essa calculadora irá deteminar os zeros (raízes) da equação de segundo grau.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>A estrutura de uma equação de segundo grau: ax<sup>2</sup>+bx+c = 0 </p>
+            </div>
+        </div>
+        <form>
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <label for="valorA">A</label>
+                    <input type="number" class="form-control" id="valorA">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="valorB">B</label>
+                    <input type="number" class="form-control" id="valorB">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="valorC">C</label>
+                    <input type="number" class="form-control" id="valorC">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <button type="button" class="btn btn-primary" onclick="Calcula()">Calcular</button>
+                </div>
+            </div>
+        </form>
+        <div class="row">
+            <div class="form-group col-md-3">
+                <label for="exampleInputPassword1">X'</label>
+                <input type="number" class="form-control" id="valorX1">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="exampleInputPassword1">X''</label>
+                <input type="number" class="form-control" id="valorX2">
+            </div>
+        </div>
+    </div>
+    <script>
+        function Calcula() {
+            var valorA = document.getElementById("valorA").value;
+            var valorB = document.getElementById("valorB").value;
+            var valorC = document.getElementById("valorC").value;
+
+            var delta = Math.pow(valorB, 2) - (4 * valorA * valorC);
+
+            var valorX1 =  (-valorB + Math.sqrt(delta)) / 2 * valorA;
+
+            var valorX2 =  (-valorB - Math.sqrt(delta)) / 2 * valorA;
+
+            var inputValorX1 = document.getElementById("valorX1");
+            inputValorX1.value = valorX1;
+
+            var inputValorX2 = document.getElementById("valorX2");
+            inputValorX2.value = valorX2;
+        }
+    </script>
+</body>
+</html>
